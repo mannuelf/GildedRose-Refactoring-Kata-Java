@@ -3,6 +3,7 @@ package com.gildedrose;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GildedRoseTest {
     Item[] items = new Item[] {
@@ -23,42 +24,42 @@ class GildedRoseTest {
     void item() {
         String expectedItemName = "Elixir of the Mongoose";
         app.updateQuality();
-        assertEquals(true, app.isElixirOfMongoose(expectedItemName));
+        assertTrue(app.isElixirOfMongoose(expectedItemName));
     }
 
     @Test
     void isAgedBrie() {
         String expectedItemName = "Aged Brie";
-        assertEquals(true, app.isAgedBrie(expectedItemName));
+        assertTrue(app.isAgedBrie(expectedItemName));
     }
 
     @Test
     void isSulfuras() {
         String expectedItemName = "Sulfuras, Hand of Ragnaros";
-        assertEquals(true, app.isSulfuras(expectedItemName));
+        assertTrue(app.isSulfuras(expectedItemName));
     }
 
     @Test
     void isBackstagePasses() {
         String expectedItemName = "Backstage passes to a TAFKAL80ETC concert";
-        assertEquals(true, app.isBackstagePasses(expectedItemName));
+        assertTrue(app.isBackstagePasses(expectedItemName));
     }
 
     @Test
     void isConjuredManaCake() {
         String expectedItemName = "Conjured Mana Cake";
-        assertEquals(true, app.isConjuredManaCake(expectedItemName));
+        assertTrue(app.isConjuredManaCake(expectedItemName));
     }
 
     @Test
-    void isElixerOfMongoos(){
+    void isElixirOfMongoose() {
         String expectedItemName = "Elixir of the Mongoose";
-        assertEquals(true, app.isElixirOfMongoose(expectedItemName));
+        assertTrue(app.isElixirOfMongoose(expectedItemName));
     }
 
     @Test
     void isDexterityVest(){
         String expectedItemName = "+5 Dexterity Vest";
-        assertEquals(true, app.isDexterityVest(expectedItemName));
+        assertTrue(app.isDexterityVest(expectedItemName));
     }
 }
