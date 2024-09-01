@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
-
     Item[] items = new Item[] {
         new Item("+5 Dexterity Vest", 10, 20), //
         new Item("Aged Brie", 2, 0), //
@@ -29,8 +28,14 @@ class GildedRoseTest {
 
     @Test
     void isAgedBrie() {
-        String expectedItemName = "Aged Brie";
-        assertEquals(expectedItemName, app.items[1].name);
+        String expectedItemName = app.items[1].name;
+        assertEquals(true, app.isAgedBrie(expectedItemName));
+    }
+
+    @Test
+    void isSulfuras() {
+        String expectedItemName = app.items[3].name;
+        assertEquals(true, app.isSulfuras(expectedItemName));
     }
 
 }
