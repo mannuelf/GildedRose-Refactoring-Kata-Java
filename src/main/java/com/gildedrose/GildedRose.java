@@ -8,22 +8,22 @@ class GildedRose {
     }
 
     public boolean isAgedBrie(String itemName) {
-        if(itemName.length() == 0) return false;
+        if(itemName.isEmpty()) return false;
         return itemName.equals("Aged Brie");
     }
 
     public boolean isSulfuras(String itemName) {
-        if(itemName.length() == 0) return false;
+        if(itemName.isEmpty()) return false;
         return itemName.equals("Sulfuras, Hand of Ragnaros");
     }
 
     public boolean isBackstagePasses(String itemName) {
-        if(itemName.length() == 0) return false;
+        if(itemName.isEmpty()) return false;
         return itemName.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
     public boolean isConjuredManaCake(String itemName) {
-        if(itemName.length() == 0) return false;
+        if(itemName.isEmpty()) return false;
         return itemName.equals("Conjured Mana Cake");
     }
 
