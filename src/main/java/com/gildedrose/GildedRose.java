@@ -9,24 +9,24 @@ class GildedRose {
 
     public boolean isAgedBrie(String itemName) {
         if(itemName.length() == 0) return false;
-        return itemName.contains("Aged Brie");
+        return itemName.equals("Aged Brie");
     }
 
     public boolean isSulfuras(String itemName) {
         if(itemName.length() == 0) return false;
-        return itemName.contains("Sulfuras, Hand of Ragnaros");
+        return itemName.equals("Sulfuras, Hand of Ragnaros");
     }
 
     public boolean isBackstagePasses(String itemName) {
         if(itemName.length() == 0) return false;
-        return itemName.contains("Backstage passes to a TAFKAL80ETC concert");
+        return itemName.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (!isAgedBrie(items[i].name) && !isBackstagePasses(items[i].name)) {
                 if (items[i].quality > 0) {
-                    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+                    if (!isSulfuras(items[i].name)) {
                         items[i].quality = items[i].quality - 1;
                     }
                 }
@@ -34,7 +34,7 @@ class GildedRose {
                 if (items[i].quality < 50) {
                     items[i].quality = items[i].quality + 1;
 
-                    if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+                    if (isBackstagePasses(items[i].name)) {
                         if (items[i].sellIn < 11) {
                             if (items[i].quality < 50) {
                                 items[i].quality = items[i].quality + 1;
@@ -50,15 +50,15 @@ class GildedRose {
                 }
             }
 
-            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+            if (!isSulfuras(items[i].name)) {
                 items[i].sellIn = items[i].sellIn - 1;
             }
 
             if (items[i].sellIn < 0) {
-                if (!items[i].name.equals("Aged Brie")) {
-                    if (!items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+                if (!isAgedBrie(items[i].name)) {
+                    if (!isBackstagePasses(items[i].name)) {
                         if (items[i].quality > 0) {
-                            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+                            if (!isSulfuras(items[i].name)) {
                                 items[i].quality = items[i].quality - 1;
                             }
                         }
