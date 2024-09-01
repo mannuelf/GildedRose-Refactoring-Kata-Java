@@ -17,9 +17,14 @@ class GildedRose {
         return itemName.contains("Sulfuras, Hand of Ragnaros");
     }
 
+    public boolean isBackstagePasses(String itemName) {
+        if(itemName.length() == 0) return false;
+        return itemName.contains("Backstage passes to a TAFKAL80ETC concert");
+    }
+
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
-            if (!isAgedBrie(items[i].name) && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            if (!isAgedBrie(items[i].name) && !isBackstagePasses(items[i].name)) {
                 if (items[i].quality > 0) {
                     if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
                         items[i].quality = items[i].quality - 1;

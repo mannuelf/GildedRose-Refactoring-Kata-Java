@@ -38,4 +38,9 @@ class GildedRoseTest {
         assertEquals(true, app.isSulfuras(expectedItemName));
     }
 
+    @Test
+    void isBackstagePasses() {
+        String expectedItemName = app.items[5].name;
+        assertEquals(true, app.isBackstagePasses(expectedItemName));
+    }
 }
