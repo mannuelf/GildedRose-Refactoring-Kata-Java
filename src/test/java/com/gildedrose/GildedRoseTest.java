@@ -21,9 +21,9 @@ class GildedRoseTest {
 
     @Test
     void item() {
-        String expectedItemName = "Conjured Mana Cake";
+        String expectedItemName = "Elixir of the Mongoose";
         app.updateQuality();
-        assertEquals(expectedItemName, app.items[8].name);
+        assertEquals(true, app.isElixirOfMongoose(expectedItemName));
     }
 
     @Test
@@ -48,5 +48,17 @@ class GildedRoseTest {
     void isConjuredManaCake() {
         String expectedItemName = "Conjured Mana Cake";
         assertEquals(true, app.isConjuredManaCake(expectedItemName));
+    }
+
+    @Test
+    void isElixerOfMongoos(){
+        String expectedItemName = "Elixir of the Mongoose";
+        assertEquals(true, app.isElixirOfMongoose(expectedItemName));
+    }
+
+    @Test
+    void isDexterityVest(){
+        String expectedItemName = "+5 Dexterity Vest";
+        assertEquals(true, app.isDexterityVest(expectedItemName));
     }
 }

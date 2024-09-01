@@ -27,6 +27,16 @@ class GildedRose {
         return itemName.equals("Conjured Mana Cake");
     }
 
+    public boolean isElixirOfMongoose(String itemName) {
+        if(itemName.isEmpty()) return false;
+        return itemName.equals("Elixir of the Mongoose");
+    }
+
+    public boolean isDexterityVest(String itemName) {
+        if(itemName.isEmpty()) return false;
+        return itemName.equals("+5 Dexterity Vest");
+    }
+
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (!isAgedBrie(items[i].name) && !isBackstagePasses(items[i].name)) {
