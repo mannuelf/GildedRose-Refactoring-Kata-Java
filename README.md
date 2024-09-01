@@ -1,5 +1,7 @@
 # Gilded Rose starting position in Java
 
+[Gilder Rose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata) all Kata versions are available in this repository.
+
 ## Run the TextTest Fixture from Command-Line
 
 ```
