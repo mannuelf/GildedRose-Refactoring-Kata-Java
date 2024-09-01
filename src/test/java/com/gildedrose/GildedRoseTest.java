@@ -28,19 +28,19 @@ class GildedRoseTest {
 
     @Test
     void isAgedBrie() {
-        String expectedItemName = app.items[1].name;
+        String expectedItemName = "Aged Brie";
         assertEquals(true, app.isAgedBrie(expectedItemName));
     }
 
     @Test
     void isSulfuras() {
-        String expectedItemName = app.items[3].name;
+        String expectedItemName = "Sulfuras, Hand of Ragnaros";
         assertEquals(true, app.isSulfuras(expectedItemName));
     }
 
     @Test
     void isBackstagePasses() {
-        String expectedItemName = app.items[5].name;
+        String expectedItemName = "Backstage passes to a TAFKAL80ETC concert";
         assertEquals(true, app.isBackstagePasses(expectedItemName));
     }
 
