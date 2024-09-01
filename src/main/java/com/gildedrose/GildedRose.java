@@ -8,39 +8,43 @@ class GildedRose {
     }
 
     public boolean isAgedBrie(String itemName) {
-        if(itemName.isEmpty()) return false;
+        if (itemName.isEmpty()) return false;
         return itemName.equals("Aged Brie");
     }
 
     public boolean isSulfuras(String itemName) {
-        if(itemName.isEmpty()) return false;
+        if (itemName.isEmpty()) return false;
         return itemName.equals("Sulfuras, Hand of Ragnaros");
     }
 
     public boolean isBackstagePasses(String itemName) {
-        if(itemName.isEmpty()) return false;
+        if (itemName.isEmpty()) return false;
         return itemName.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
     public boolean isConjuredManaCake(String itemName) {
-        if(itemName.isEmpty()) return false;
+        if (itemName.isEmpty()) return false;
         return itemName.equals("Conjured Mana Cake");
     }
 
     public boolean isElixirOfMongoose(String itemName) {
-        if(itemName.isEmpty()) return false;
+        if (itemName.isEmpty()) return false;
         return itemName.equals("Elixir of the Mongoose");
     }
 
     public boolean isDexterityVest(String itemName) {
-        if(itemName.isEmpty()) return false;
+        if (itemName.isEmpty()) return false;
         return itemName.equals("+5 Dexterity Vest");
+    }
+
+    public boolean hasItems(Item[] items) {
+        return items != null && items.length > 0;
     }
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (!isAgedBrie(items[i].name) && !isBackstagePasses(items[i].name)) {
-                if (items[i].quality > 0) {
+                if (hasItems(items)) {
                     if (!isSulfuras(items[i].name)) {
                         items[i].quality = items[i].quality - 1;
                     }
