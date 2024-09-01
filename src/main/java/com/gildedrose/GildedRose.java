@@ -22,6 +22,11 @@ class GildedRose {
         return itemName.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
+    public boolean isConjuredManaCake(String itemName) {
+        if(itemName.length() == 0) return false;
+        return itemName.equals("Conjured Mana Cake");
+    }
+
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (!isAgedBrie(items[i].name) && !isBackstagePasses(items[i].name)) {

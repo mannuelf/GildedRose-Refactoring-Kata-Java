@@ -43,4 +43,10 @@ class GildedRoseTest {
         String expectedItemName = app.items[5].name;
         assertEquals(true, app.isBackstagePasses(expectedItemName));
     }
+
+    @Test
+    void isConjuredManaCake() {
+        String expectedItemName = "Conjured Mana Cake";
+        assertEquals(true, app.isConjuredManaCake(expectedItemName));
+    }
 }
